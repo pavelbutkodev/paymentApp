@@ -15,9 +15,7 @@ export const validation = (value: any, target: string, form: any) => {
 		}
 	}
 	if (target === 'expiry') {
-		if (value.length === 4) {
-			return true;
-		}
+		return /^\d{2}\/\d{2}$/.test(value);
 	}
 	if (target === 'name') {
 		if (value.length > 0 && value.length <= 50) {

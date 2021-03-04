@@ -1,6 +1,10 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {
+	useCallback,
+	useEffect,
+	useState
+} from 'react';
 
-import {getFail, getSuccess} from "../../../api/services";
+import { getFail, getSuccess } from "../../../api/services";
 
 import styles from './styles.module.scss';
 
@@ -8,7 +12,6 @@ const Success = () => {
 	const [success, setSuccess] = useState('');
 	const [fail, setFail] = useState('');
 	const [isValid, setValid] = useState(localStorage.getItem('valid'));
-	console.log('===>fail', fail);
 	const getSuccessMessage = useCallback(
 		() => {
 			getSuccess()

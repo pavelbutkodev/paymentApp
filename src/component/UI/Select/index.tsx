@@ -4,11 +4,13 @@ import React, {
 	useState
 } from 'react';
 
-import {getCards} from "../../../api/services";
+import { getCards } from "../../../api/services";
 
 import styles from './styles.module.scss';
+import arrow from "../../../assets/img/arrow.png";
+import { ISelect } from "./types";
 
-const Select = ({text, onChange, valid, classValid}: any) => {
+const Select = ({text, onChange, valid}: ISelect) => {
 	const [cardTypes, setCardTypes] = useState([]);
 
 	const getUserAll = useCallback(
@@ -45,7 +47,13 @@ const Select = ({text, onChange, valid, classValid}: any) => {
 					</option>
 				))}
 			</select>
-			{valid === true ? <div className={styles.classValid}>!</div> : ''}
+			{valid ?
+				<div className={styles.classValid}>
+					<img className={styles.arrow}
+					     src={arrow}
+					     alt="arrow"
+					/>
+				</div> : ''}
 		</label>
 	);
 }

@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 
 import styles from './styles.module.scss';
 
 const Info = () => {
 	const [date, setDate] = useState(new Date())
-	// setInterval(() => {
-	// 	setDate(new Date())
-	// }, 1000)
+	setInterval(() => {
+		setDate(new Date())
+	}, 1000)
 	return (
 		<div className={styles.info}>
 			<p>Product: BOOK</p>

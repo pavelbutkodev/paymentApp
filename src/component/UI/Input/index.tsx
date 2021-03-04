@@ -1,8 +1,10 @@
 import React from 'react';
 
 import styles from './styles.module.scss';
+import arrow from '../../../assets/img/arrow.png'
+import { IInput } from "./types";
 
-const Input = ({text, id, onChange, value, valid, maxLength}: any) => {
+const Input = ({text, id, onChange, value, valid, maxLength}: IInput) => {
 	return (
 		<label>
 			<span>{text}</span>
@@ -13,7 +15,12 @@ const Input = ({text, id, onChange, value, valid, maxLength}: any) => {
 				value={value}
 				maxLength={maxLength}
 			/>
-			{valid === true ? <div className={styles.classValid}>!</div> : ''}
+			{valid ? <div className={styles.classValid}>
+				<img className={styles.arrow}
+				     src={arrow}
+				     alt="arrow"
+				/>
+			</div> : ''}
 		</label>
 	);
 }
