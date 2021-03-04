@@ -1,6 +1,5 @@
 export const validation = (value: any, target: string, form: any) => {
 	if (target === 'card') {
-		console.log('===>value', value);
 		return !!value
 	}
 	if (target === 'cardNumber') {

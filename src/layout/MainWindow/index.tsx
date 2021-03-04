@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 import Info from "../../component/Shared/Info";
-import Success from "../../component/Shared/Success";
+import Success from "../../component/Shared/Result";
 import Form from "../../component/Shared/Form";
 
 import styles from './styles.module.scss';

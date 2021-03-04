@@ -31,10 +31,11 @@ const Select = ({text, onChange, valid}: ISelect) => {
 			{text}
 			<select
 				onChange={onChange}
+				defaultValue={'base'}
 			>
 				<option
 					disabled
-					selected
+					value={'base'}
 				>
 					- Select Card Types -
 				</option>
